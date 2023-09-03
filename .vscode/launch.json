@@ -8,19 +8,14 @@
             "name": "Pytest All Tests",
             "type": "python",
             "request": "launch",
-            "stopOnEntry": false,
             "module": "pytest",
             "args": [
                 "-sv"
             ],
-            "cwd": "${workspaceRoot}",
-            "env": {},
-            "envFile": "${workspaceRoot}/.env",
-            "debugOptions": [
-                "WaitOnAbnormalExit",
-                "WaitOnNormalExit",
-                "RedirectOutput"
-            ]
+            "env": {
+                "FOO": "bar",
+            },
+            "cwd": "${workspaceRoot}/app",
         }
     ]
 }
