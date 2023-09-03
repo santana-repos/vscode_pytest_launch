@@ -10,12 +10,16 @@
             "request": "launch",
             "module": "pytest",
             "args": [
-                "-sv"
+                "-sv",
+                "--disable-pytest-warnings"
             ],
             "env": {
                 "FOO": "bar",
+                "PYTHONPATH": "$PYTHONPATH:${workspaceRoot}/app",
             },
             "cwd": "${workspaceRoot}/app",
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }
